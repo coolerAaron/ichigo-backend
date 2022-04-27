@@ -17,7 +17,7 @@ This is pretty barebones, but:
 2. This serves it up on [http://localhost:3000](http://localhost:3000)...
 3. ...but to actual use the api, you send graphql queries over to the `/graphql` endpoint
     1. I reccomend something like insomnia for that, but you also just navigate to the endpoint on your browser and use the graphql playground interface.
-
+  4. If anything weird happens, try using `npm v16.4.1`
 # GraphQL Schema
 
 There are two main queries of note, a query (duh) for grabbing or generating users on the spot and a mutation for actually redeeming rewards, which involves writing to the rewards object on a given user.
