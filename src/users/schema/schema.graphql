@@ -1,0 +1,27 @@
+type User {
+  id: Int!
+  rewards(weekOf: String!): [Reward!]!
+}
+
+type Reward {
+  availableAt: String!
+  redeemedAt: String
+  expiresAt: String!
+}
+
+input UserRequest {
+  id: Int!
+}
+
+input RedeemInput {
+  id: Int!
+  availableAt: String!
+}
+
+type Query {
+  user(userInput: UserRequest!): User
+}
+
+type Mutation {
+  redeemReward(redeemInput: RedeemInput!): Reward
+}
